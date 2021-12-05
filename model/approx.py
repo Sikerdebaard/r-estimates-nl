@@ -48,6 +48,7 @@ def _test_r_series_shift(example_series, input_series):
 
     df_combined_r = example_series.rename('example').loc[idx_sel].to_frame().join(input_series.rename('input').loc[idx_sel])
     ret = [
+        idx_sel.shape[0],
         df_combined_r.corr('pearson').at['example', 'input'],
         df_combined_r.corr('kendall').at['example', 'input'],
         df_combined_r.corr('spearman').at['example', 'input'],
@@ -62,13 +63,14 @@ def _test_r_series_shift(example_series, input_series):
 def test_metrics(true_series, predicted_series):
     ret = _test_r_series_shift(true_series, predicted_series)
     metrics = {
-        'pearsons_r': ret[0],
-        'kendall': ret[1],
-        'spearman': ret[2],
-        'mse': ret[3],
-        'explained_variance_score': ret[4],
-        'r2': ret[5],
-        'rmse': ret[6],
+        'N': ret[0],
+        'pearsons_r': ret[1],
+        'kendall': ret[2],
+        'spearman': ret[3],
+        'mse': ret[4],
+        'explained_variance_score': ret[5],
+        'r2': ret[6],
+        'rmse': ret[7],
     }
 
     return metrics
