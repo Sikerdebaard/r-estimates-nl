@@ -11,7 +11,7 @@ import statsmodels.api as sm
 import requests
 
 import matplotlib as mpl
-mpl.rcParams['figure.dpi'] = 300
+mpl.rcParams['figure.dpi'] = 150 
 
 import seaborn as sns
 sns.set_style('whitegrid')
@@ -219,7 +219,7 @@ def download_rivm_casecounts():
 def download_nursing_homes():
     df_nurs = pd.read_csv(download_file_with_progressbar('https://covid-analytics.nl/nursing-homes.csv'), index_col=0)
     df_nurs.index = pd.to_datetime(df_nurs.index)
-    df_nurs = df_nurs[df_nurs.index > '2021-06-01']
+    df_nurs = df_nurs[df_nurs.index > '2021-01-01']
 
     return df_nurs
 
@@ -300,10 +300,14 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
         df_series_r, iters = approx_r_from_time_series(timeseries, generation_interval)
     df_series_r, use_shift, df_corr, metrics, corr_metric_used = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
     metrics['shift'] = use_shift
+    metrics['uses'] = name
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
 
     prep_and_plot(df_series_r, plot_label, df_example, name, output_path, plot_title, plot_subtitle, draw_colors)
+
+    df_series_r = df_series_r[df_series_r.index >= '2021-01-01']
+    df_series_r = df_series_r[df_series_r.columns[:8]]
     df_series_r.dropna().to_csv(output_path / f'r_{name}.csv', index_label='date')
 
     return df_series_r, iters, metrics
@@ -311,13 +315,16 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
 
 #gen_int_min = 3
 #gen_int_max = 7 
-gen_int_min = 3
-gen_int_max = 5 
+
+#gen_int_min = 3
+#gen_int_max = 5 
+gen_int_min = 4
+gen_int_max = 4 
 generation_interval = np.linspace(gen_int_min, gen_int_max, (gen_int_max-gen_int_min)*10+1)
 
 print(f'Using generation interval {np.min(generation_interval)}-{np.max(generation_interval)}')
 
-output_path = Path('/tmp/testout')
+output_path = Path('data')
 
 rivm_main_col = 'R (RIVM)'
 df_rivm, rivm_fill_cols = download_rivm_r()
@@ -417,17 +424,34 @@ all_metrics[params['name']] = metrics
 r_iters[params['name']] = iters.shift(metrics['shift'])
 
 
+combo_models = {}
+r_combo_models = {}
+try_models = []
+for num_models in range(2, len(r_iters.keys()) + 1):
+    for include_models in combinations(r_iters.keys(), num_models):
+        iters = [r_iters[m].copy() for m in include_models]
+        try_models.append([iters, *include_models])
 
-#c = ['sewage', 'icu', 'hosp', 'case', 'mun', 'nurs']
 
-#[print(a) for a in combinations(c, 3)]
-df_combined_r = combine_runs(r_iters, generation_interval)
-metrics = test_metrics(df_rivm[rivm_main_col], df_combined_r['50%'])
+for iters in tqdm(try_models):
+    df_combined_r = combine_runs(iters[0], generation_interval)
+    metrics = test_metrics(df_rivm[rivm_main_col], df_combined_r['50%'])
+    k = ', '.join(tuple(sorted(iters[1:])))
+    combo_models[k] = metrics
+    r_combo_models[k] = df_combined_r
+
+df_combo_metrics = pd.DataFrame(combo_models).T.to_csv(output_path / 'combo_metrics.csv')
+
+# we could do some model selection based on the metrics above, but for now use all
+
+k = ', '.join(tuple(sorted(r_iters.keys())))
+df_combined_r = r_combo_models[k]
+metrics = combo_models[k]
 metrics['shift'] = 0
+metrics['uses'] = k
 all_metrics['combined'] = metrics
 plot_title = 'Combined R estimate vs RIVM R' 
 subtitle = base_params['plot_subtitle']
-print(df_combined_r.columns)
 prep_and_plot(df_combined_r, 'R (combined, estimate)', df_rivm, 'combined', output_path, plot_title, subtitle, gen_colors_with('#1D3557'))
 df_combined_r.dropna().to_csv(output_path / 'r_combined.csv', index_label='date')
 
