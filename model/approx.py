@@ -242,9 +242,11 @@ def download_file_with_progressbar(url):
 
 def gen_colors_with(color):
     return [
-        '#229922',  # trendline
-        '#C6B38E',  # RIVM
+        #'#229922',  # trendline
+        '#E4572E',  # trendline
+        #'#C6B38E',  # RIVM
         color, # custom
+        '#154273',  # RIVM
     ][::-1]
 
 
@@ -349,7 +351,7 @@ params = {
     'timeseries': df_sewage['RNA_flow_per_100000'].rename('sewage data'), 
     'plot_title': 'Sewage R estimate vs RIVM R',
     'plot_label': 'R (Sewage, estimate)',
-    'draw_colors': gen_colors_with('#1D3557'),
+    'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
 all_metrics[params['name']] = metrics
@@ -364,7 +366,7 @@ params = {
     'timeseries': df_icu.rename('icu data'), 
     'plot_title': 'ICU admissions R estimate vs RIVM R',
     'plot_label': 'R (ICU admissions, estimate)',
-    'draw_colors': gen_colors_with('#1D3557'),
+    'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
 all_metrics[params['name']] = metrics
@@ -378,7 +380,7 @@ params = {
     'timeseries': df_hospital.rename('hospital data'), 
     'plot_title': 'Hospital admissions R estimate vs RIVM R',
     'plot_label': 'R (hospital admissions, estimate)',
-    'draw_colors': gen_colors_with('#1D3557'),
+    'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
 all_metrics[params['name']] = metrics
@@ -391,7 +393,7 @@ params = {
     'timeseries': df_case['case-counts'].rename('case-counts data'), 
     'plot_title': 'Casecounts R estimate vs RIVM R',
     'plot_label': 'R (casecounts, estimate)',
-    'draw_colors': gen_colors_with('#1D3557'),
+    'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
 all_metrics[params['name']] = metrics
@@ -403,7 +405,7 @@ params = {
     'timeseries': df_case['municipality'].rename('municipal case-counts data'), 
     'plot_title': 'Municipal casecounts R estimate vs RIVM R',
     'plot_label': 'R (municipal casecounts, estimate)',
-    'draw_colors': gen_colors_with('#1D3557'),
+    'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
 all_metrics[params['name']] = metrics
@@ -417,7 +419,7 @@ params = {
     'timeseries': df_nurs['Total_cases_reported'].rename('nursing-homes data'), 
     'plot_title': 'Nursing homes casecounts R estimate vs RIVM R',
     'plot_label': 'R (nursing homes casecounts, estimate)',
-    'draw_colors': gen_colors_with('#1D3557'),
+    'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
 all_metrics[params['name']] = metrics
@@ -452,7 +454,7 @@ metrics['uses'] = k
 all_metrics['combined'] = metrics
 plot_title = 'Combined R estimate vs RIVM R' 
 subtitle = base_params['plot_subtitle']
-prep_and_plot(df_combined_r, 'R (combined, estimate)', df_rivm, 'combined', output_path, plot_title, subtitle, gen_colors_with('#1D3557'))
+prep_and_plot(df_combined_r, 'R (combined, estimate)', df_rivm, 'combined', output_path, plot_title, subtitle, gen_colors_with('#0ACC0D'))
 df_combined_r.dropna().to_csv(output_path / 'r_combined.csv', index_label='date')
 
 df_metrics = pd.DataFrame(all_metrics).T
