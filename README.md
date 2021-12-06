@@ -6,6 +6,13 @@ R as estimated on various time series data compared to the R as calculated by th
 * [Model descriptions](#model-descriptions)
   * [Combined model](#combined-model)
   * [Case-reports casecounts](#case-reports-casecounts)
+  * [Municipal casecounts](#municipal-casecounts)
+  * [Nursing homes casecounts](#nursing-homes-casecounts)
+  * [Sewage](#sewage)
+  * [Hospital admissions](#hospital-admissions)
+  * [ICU admissions](#icu-admissions)
+* [Metrics](#metrics)
+* [License and academic use](#license-and-academic-use)
 
 ## Plot explanation
 All plotted estimates show the following:
