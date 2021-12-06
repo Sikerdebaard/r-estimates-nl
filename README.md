@@ -65,4 +65,8 @@ This project keeps track of the models performance through various metrics. E.g.
 For now the combined model uses all time-series data, but in the future we might want to do some model selection. The project keeps track on the different model combinations in [combo_metrics.csv](data/combo_metrics.csv).
 
 ## License and academic use
-The graphs and data are licensed [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/). The original data is copyright RIVM and Stichting NICE.
+The graphs and data are licensed [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/). The original data is copyright RIVM and Stichting NICE.  
+
+For academic use, use presistent data from: [![DOI](https://zenodo.org/badge/435139799.svg)](https://zenodo.org/badge/latestdoi/435139799)  
+
+Please cite: `Thomas Phil. (2021). Sikerdebaard/r-estimates-nl: v20211206 (Version v20211206). Zenodo. https://doi.org/10.5281/zenodo.5762029`
