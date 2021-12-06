@@ -17,7 +17,7 @@ import seaborn as sns
 sns.set_style('whitegrid')
 
 
-# affix random seed
+# affix random seed.
 import random
 
 random.seed(0)
