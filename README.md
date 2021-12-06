@@ -2,10 +2,10 @@
 R as estimated on various time series data compared to the R as calculated by the RIVM. This repo uses Netherlands data only.
   
 **Table of Contents**  
-* [Plot explanation](#plot-explanation)  
 * [What is R?](#what-is-r)
 * [Why this model?](#why-this-model)
 * [How does it work?](#how-does-it-work)
+* [Plot explanation](#plot-explanation)  
 * [Model results](#model-results)
   * [Combined model](#combined-model)
   * [Case-reports casecounts](#case-reports-casecounts)
