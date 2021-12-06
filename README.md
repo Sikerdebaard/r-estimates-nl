@@ -6,7 +6,7 @@ R as estimated on various time series data compared to the R as calculated by th
 * [What is R?](#what-is-r)
 * [Why this model?](#why-this-model)
 * [How does it work?](#how-does-it-work)
-* [Model descriptions](#model-descriptions)
+* [Model results](#model-results)
   * [Combined model](#combined-model)
   * [Case-reports casecounts](#case-reports-casecounts)
   * [Municipal casecounts](#municipal-casecounts)
@@ -36,8 +36,8 @@ All plotted estimates show the following:
 
 Please note that the green line displays the median of all the models estimated curves. This means that 50% of the predicted values are above the median line and 50% of the predicted values are below the median line. The green area shows the predicted curves between the 5th and 95th percentile.
 
-## Model descriptions
-Now follow a series of model descriptions.
+## Model results
+Now follows a series of model results.
 
 ### Combined model
 The combined model uses time series data on sewage, case-counts (case-reports, nursing homes, municipal case counts) and hospital / icu admissions.
