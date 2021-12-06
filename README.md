@@ -1,7 +1,7 @@
 # R-estimates-nl
 R as estimated on various time series data compared to the R as calculated by the RIVM. This repo uses Netherlands data only.
-
-##### Table of Contents  
+  
+**Table of Contents**  
 * [Plot explanation](#plot-explanation)  
 * [Model descriptions](#model-descriptions)
   * [Combined model](#combined-model)
