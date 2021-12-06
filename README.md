@@ -3,6 +3,9 @@ R as estimated on various time series data compared to the R as calculated by th
   
 **Table of Contents**  
 * [Plot explanation](#plot-explanation)  
+* [What is R?](#what-is-r)
+* [Why this model?](#why-this-model)
+* [How does it work?](#how-does-it-work)
 * [Model descriptions](#model-descriptions)
   * [Combined model](#combined-model)
   * [Case-reports casecounts](#case-reports-casecounts)
@@ -13,6 +16,18 @@ R as estimated on various time series data compared to the R as calculated by th
   * [ICU admissions](#icu-admissions)
 * [Metrics](#metrics)
 * [License and academic use](#license-and-academic-use)
+
+## What is R?
+R is the reproduction number. This is a number that describes if the spread of a disease is growing or shrinking but it does not include time. Rt helps in decision making during outbreaks as it is a clear indicator if the disease is growing (Rt>1), is stable (Rt=1) or if it is shrinking (Rt<1). E.g. if Rt=1 then 1 infected person will, on average, infect 1 additional person. If R=0.9 then one infected person will, on average, infect 0.9 additional person. If R=1.1 then one infected person will, on average, infect 1.1 additional person.  
+
+The Rt can be estimated from any growth rate on e.g. hospitalizations, icu admissions, case-counts and perhaps also sewage data. A formula to get an approximation of Rt based on the growth rate is as follows: `Rt = e^(λ*T)` where `λ = growth rate` and `T = generation interval`. Note: Rt values from the RIVM in NL, are generated from model based estimates instead of using this approximation on time-series data directly.  
+Ballpark generation interval numbers for covid are 3 to 5 days. This is the average interval until a newly infected person infects another person. This is the number we need to add time to the equation. This model currently uses a generation interval of 4, but if need be this can be changed to a range of e.g. 3 to 5. However, currently that decreases the models performance vs. the R as calculated by the RIVM. Thus the choice was made to make it a static 4.
+
+## Why this model?
+Basing R estimates on case-counts alone is prone to error due to testing systems getting overloaded due to large outbreaks. Calculating R estimates over hospital/ICU admissions is prone to healthcare system getting overwhelmed. Hence this model aims to integrate more datasources, for example sewage data, to produce estimates that might give additional insights into the spread of the virus.
+
+## How does it work?
+The time-series data is resampled into seven buckets. One for each day of the week. Polynomials of the 2nd degree are then fitted to resample these buckets from weekly data back to daily estimates. Over each bucket the R is then approximated using the formula `Rt = e^(λ*T)`.  The resulting R values in these seven buckets are then combined to generate the 5th / 50th / 95th percentile. The combined model currently uses all time-series data. It might be helpful to perform model selection to improve the combined model.
 
 ## Plot explanation
 All plotted estimates show the following:
