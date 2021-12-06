@@ -34,7 +34,7 @@ All plotted estimates show the following:
 * R as calculated by the RIVM in blue, with the upper and lower bands as a blue area
 * R as estimated by the model in green, with the upper and lower bands as a green area
 
-Please note that the green line displays the median of all the models estimated curves. This means that 50% of the predicted values are above the median line and 50% of the predicted values are below the median line. The green area shows the predicted curves between the 5th and 95th percentile.
+Please note that the green line displays the median of all the models estimated curves. This means that 50% of the estimated values are above the median line and 50% of the estimated values are below the median line. The green area shows the estimated curves between the 5th and 95th percentile.
 
 ## Model results
 Now follows a series of model results.
