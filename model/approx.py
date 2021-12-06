@@ -71,13 +71,13 @@ def test_metrics(true_series, predicted_series):
     ret = _test_r_series_shift(true_series, predicted_series)
     metrics = {
         'N': ret[0],
-        'pearsons_r': ret[1],
-        'kendall': ret[2],
-        'spearman': ret[3],
-        'mse': ret[4],
-        'explained_variance_score': ret[5],
-        'r2': ret[6],
-        'rmse': ret[7],
+        'pearsons_r': np.round(ret[1], 6),
+        'kendall': np.round(ret[2], 6),
+        'spearman': np.round(ret[3], 6),
+        'mse': np.round(ret[4], 6),
+        'explained_variance_score': np.round(ret[5], 6),
+        'r2': np.round(ret[6], 6),
+        'rmse': np.round(ret[7], 6),
     }
 
     return metrics
@@ -110,7 +110,6 @@ def _find_best_shift_fit(example_series, input_series, shiftrange):
     return df_corr, shift, metrics, corr_metric_used
 
 
-DEBUG_CNT = 0
 def shift_series_best_fit(df_base, column_base, df_shift, column_shift, shiftrange=(-21, 21)):
     #cut_len = -7*36 if df_shift.shape[0] > -7*36 else df_shift.shape[0]  # we only want metrics over recent numbers
     cut_len = 0
