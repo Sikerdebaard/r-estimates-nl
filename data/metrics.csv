@@ -1,8 +1,8 @@
 ,N,pearsons_r,kendall,spearman,mse,explained_variance_score,r2,rmse,shift_corr_metric,shift,uses
 sewage,171.0,0.850931,0.471096,0.669795,0.106997,0.688374,0.679551,0.327104,pearsons_r,-1,sewage
 icu,171.0,0.822152,0.538693,0.729749,0.049506,0.615083,0.613455,0.2225,pearsons_r,-10,icu
-hospital,171.0,0.926689,0.648624,0.837996,0.030996,0.521715,0.518731,0.176056,pearsons_r,-9,hospital
+hospital,171.0,0.926705,0.64793,0.837353,0.030996,0.521763,0.51873,0.176057,pearsons_r,-9,hospital
 case-counts,171.0,0.68627,0.829623,0.935484,0.907367,0.343792,0.326056,0.952558,spearman,0,case-counts
 municipal-case-counts,171.0,0.703952,0.827402,0.94715,0.451311,0.424628,0.409205,0.671797,spearman,-4,municipal-case-counts
 nursing-homes,171.0,0.789459,0.469708,0.631359,0.067667,0.580852,0.541803,0.260128,pearsons_r,-7,nursing-homes
-combined,171,0.955626,0.759667,0.92042,0.013,0.901932,0.89981,0.114019,,0,"case-counts, hospital, icu, municipal-case-counts, nursing-homes, sewage"
+combined,171,0.955609,0.759667,0.920344,0.013005,0.901912,0.899785,0.114041,,0,"case-counts, hospital, icu, municipal-case-counts, nursing-homes, sewage"
