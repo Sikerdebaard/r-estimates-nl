@@ -47,7 +47,7 @@ def approx_r_from_time_series(series, generation_interval, min_samples=5):
     df_iters = df_iters[df_iters.count(axis=1) >= min_samples * len(generation_interval)].T.describe([.05, .5, .95]).T
     #df_r = df_iters['mean'].rename('Approx_R').to_frame()
 
-    return df_iters, df_raw
+    return df_iters.round(6), df_raw.round(6)
 
 
 def _test_r_series_shift(example_series, input_series):
