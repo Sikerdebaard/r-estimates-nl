@@ -279,8 +279,8 @@ def combine_runs(dfs, generation_interval, min_samples=5):
 def prep_and_plot(df_approx_r, main_col_label, df_rivm, modelname, outdir, title, subtitle, draw_colors, hard_ylim=5):
     #df_approx_r['approx_up'] = df_approx_r['mean'] + df_approx_r['std'] * 1.96
     #df_approx_r['approx_down'] = df_approx_r['mean'] - df_approx_r['std'] * 1.96
-    df_approx_r['approx_up'] = df_approx_r['5%']
-    df_approx_r['approx_down'] = df_approx_r['95%']
+    df_approx_r['approx_up'] = df_approx_r['95%']
+    df_approx_r['approx_down'] = df_approx_r['5%']
     df_approx_r[main_col_label] = df_approx_r['50%']
 
     df_plot = df_rivm.join(df_approx_r[[main_col_label, 'approx_up', 'approx_down']], how='outer')
