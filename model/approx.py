@@ -17,6 +17,13 @@ import seaborn as sns
 sns.set_style('whitegrid')
 
 
+# affix random seed
+import random
+
+random.seed(0)
+np.random.seed(0)
+
+
 def approx_r_from_time_series(series, generation_interval, min_samples=5):
     df_iters = None
 
