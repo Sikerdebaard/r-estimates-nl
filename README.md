@@ -76,7 +76,7 @@ The ICU admissions model uses time series [data on ICU admissions](https://www.s
 [r_icu.csv](data/r_icu.csv)
 
 ## Metrics
-This project keeps track of the models performance through various metrics. E.g. the R2 score, MSE and correlation metrics. These can be found in [metrics.csv](data/metrics.csv).  
+This project keeps track of the models performance by comparing its outputs with the R, as calculated by the RIVM, through various metrics. E.g. the R2 score, MSE and correlation metrics. These can be found in [metrics.csv](data/metrics.csv).  
 For now the combined model uses all time-series data, but in the future we might want to do some model selection. The project keeps track on the different model combinations in [combo_metrics.csv](data/combo_metrics.csv).
 
 ## License and academic use
