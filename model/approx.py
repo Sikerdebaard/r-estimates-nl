@@ -24,7 +24,7 @@ random.seed(0)
 np.random.seed(0)
 
 
-def approx_r_from_time_series(series, generation_interval, min_samples=5):
+def approx_r_from_time_series(series, generation_interval, min_samples=2):
     df_iters = None
 
     print(f'Working on {series.name}')
@@ -258,7 +258,7 @@ def gen_colors_with(color):
     ][::-1]
 
 
-def combine_runs(dfs, generation_interval, min_samples=5):
+def combine_runs(dfs, generation_interval, min_samples=3):
     df_iters = None
 
     runcounter = 0
