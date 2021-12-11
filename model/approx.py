@@ -196,6 +196,20 @@ def download_sewage_data():
     return df_sewage
 
 
+def download_sewage_data_newstyle():
+    df_sewage = download_sewage_data()
+
+    print('Interpolating and combining AWZI station data')
+
+    df_combined_interpolated = pd.DataFrame(index=pd.to_datetime([]))
+    for awzi in tqdm(list(df_sewage['RWZI_AWZI_code'].unique())):
+        df_combined_interpolated = df_combined_interpolated.join(df_sewage[df_sewage['RWZI_AWZI_code'] == awzi]['RNA_flow_per_100000'].sort_index().resample('D').interpolate('polynomial', order=2).rename(f'awzi_{awzi}'), how='outer')
+
+        df_combined_interpolated = df_combined_interpolated.sort_index()
+
+    return df_combined_interpolated.T.mean().rename('RNA_flow_per_100000').to_frame()
+
+
 def download_nice_icu_data():
     df_icu = pd.read_excel(download_file_with_progressbar('https://github.com/Sikerdebaard/dutchcovid19data/raw/master/data/new-intake.xlsx'), index_col=0)
     df_icu.index = pd.to_datetime(df_icu.index)
@@ -352,7 +366,8 @@ base_params = {
 
 
 
-df_sewage = download_sewage_data()
+#df_sewage = download_sewage_data()
+df_sewage = download_sewage_data_newstyle()
 params = {
     'name': 'sewage',
     'incomplete_shift': 0,
