@@ -35,7 +35,7 @@ def approx_r_from_time_series(series, generation_interval, min_samples=2):
     dow_samples = ['W-MON', 'W-TUE', 'W-WED', 'W-THU', 'W-FRI', 'W-SAT', 'W-SUN']
     for gen_int, dow in tqdm(tuple(product(generation_interval, dow_samples))):
         df_iter = series.rename(f'{dow}_{gen_int}').resample('D').mean().interpolate('polynomial', order=2).resample(dow, label='left', closed='left').quantile(.5).resample('D').last().interpolate('polynomial', order=2)
-        df_iter = np.e**(df_iter.pct_change()*gen_int)
+        df_iter = np.e**(1+df_iter.pct_change()*gen_int)
         
         if df_iters is None:
             df_iters = df_iter.to_frame()
