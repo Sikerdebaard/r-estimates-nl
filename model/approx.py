@@ -311,6 +311,12 @@ def prep_and_plot(df_approx_r, main_col_label, df_rivm, modelname, outdir, title
     fig = ax.get_figure()
     fig.savefig(str(outdir / f'{modelname}.png'))
 
+    
+def corr_plot(df_corr, modelname, outdir):
+    ax = df_corr.plot(title=f'Correlation numbers {modelname}', figsize=(8, 6), grid=True)
+    fig = ax.get_figure()
+    fig.savefig(str(outdir / f'corr_{modelname}.png'))
+
 
 def modparams(new):
     global base_params
@@ -328,6 +334,7 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
     metrics['delay_days'] = (1 - min_samples) + use_shift
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
+    corr_plot(df_corr[corr_metric_used], {name}, output_path)
 
     prep_and_plot(df_series_r, plot_label, df_example, name, output_path, plot_title, plot_subtitle, draw_colors)
 
