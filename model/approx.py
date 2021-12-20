@@ -317,14 +317,15 @@ def modparams(new):
     return {**base_params, **new}
 
 
-def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries, df_example, example_main_col, plot_title, plot_subtitle, plot_label, output_path, draw_colors):
+def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries, df_example, example_main_col, plot_title, plot_subtitle, plot_label, output_path, draw_colors, min_samples):
     if incomplete_shift != 0:
-        df_series_r, iters = approx_r_from_time_series(timeseries[:-incomplete_shift], generation_interval)
+        df_series_r, iters = approx_r_from_time_series(timeseries[:-incomplete_shift], generation_interval, min_samples=min_samples)
     else:
-        df_series_r, iters = approx_r_from_time_series(timeseries, generation_interval)
+        df_series_r, iters = approx_r_from_time_series(timeseries, generation_interval, min_samples=min_samples)
     df_series_r, use_shift, df_corr, metrics, corr_metric_used = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
     metrics['shift'] = use_shift
     metrics['uses'] = name
+    metrics['delay_days'] = (1 - min_samples) + use_shift
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
 
@@ -362,6 +363,7 @@ base_params = {
     'example_main_col': rivm_main_col,
     'output_path': output_path,
     'plot_subtitle': '@covid_nl',
+    'min_samples': 2,
 }
 
 
