@@ -107,15 +107,15 @@ def _find_best_shift_fit(example_series, input_series, shiftrange):
     #shift = int(round(corr_idx * .5 + mse_idx * .5, 0))
     shift = idx 
 
-    return df_corr, shift, metrics, corr_metric_used
+    return df_corr, shift, metrics, corr_metric_used, use
 
 
 def shift_series_best_fit(df_base, column_base, df_shift, column_shift, shiftrange=(-21, 21)):
     #cut_len = -7*36 if df_shift.shape[0] > -7*36 else df_shift.shape[0]  # we only want metrics over recent numbers
     cut_len = 0
-    df_corr, use_shift, metrics, corr_metric_used = _find_best_shift_fit(df_base[column_base], df_shift[column_shift][cut_len:], shiftrange)
+    df_corr, use_shift, metrics, corr_metric_used, use_corr_metrics = _find_best_shift_fit(df_base[column_base], df_shift[column_shift][cut_len:], shiftrange)
 
-    return df_shift.shift(use_shift), use_shift, df_corr, metrics, corr_metric_used
+    return df_shift.shift(use_shift), use_shift, df_corr, metrics, corr_metric_used, use_corr_metrics
 
 
 def calctrendline(series):
@@ -328,13 +328,13 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
         df_series_r, iters = approx_r_from_time_series(timeseries[:-incomplete_shift], generation_interval, min_samples=min_samples)
     else:
         df_series_r, iters = approx_r_from_time_series(timeseries, generation_interval, min_samples=min_samples)
-    df_series_r, use_shift, df_corr, metrics, corr_metric_used = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
+    df_series_r, use_shift, df_corr, metrics, corr_metric_used, use_corr_metrics = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
     metrics['shift'] = use_shift
     metrics['uses'] = name
     metrics['delay_days'] = (1 - min_samples) + use_shift
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
-    corr_plot(df_corr[corr_metric_used], {name}, output_path)
+    corr_plot(df_corr[use_corr_metrics], name, output_path)
 
     prep_and_plot(df_series_r, plot_label, df_example, name, output_path, plot_title, plot_subtitle, draw_colors)
 
