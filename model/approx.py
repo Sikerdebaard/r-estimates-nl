@@ -172,7 +172,7 @@ def download_rivm_r():
     df_rivm.sort_index(inplace=True)
     df_rivm.index.rename('date', inplace=True)
 
-    df_rivm = df_rivm[df_rivm.index >= '2021-06-15']
+    df_rivm = df_rivm[df_rivm.index >= '2021-07-15']
 
     rename = {
         'Rt_low': 'rivm_low',
