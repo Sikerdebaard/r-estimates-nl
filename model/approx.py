@@ -24,7 +24,7 @@ random.seed(0)
 np.random.seed(0)
 
 
-def approx_r_from_time_series(series, generation_interval, min_samples=2):
+def approx_r_from_time_series(series, generation_interval, min_samples=3):
     df_iters = None
 
     print(f'Working on {series.name}')
@@ -370,7 +370,7 @@ base_params = {
     'example_main_col': rivm_main_col,
     'output_path': output_path,
     'plot_subtitle': '@covid_nl',
-    'min_samples': 2,
+    'min_samples': 3,
 }
 
 
