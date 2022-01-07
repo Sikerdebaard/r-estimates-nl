@@ -41,7 +41,7 @@ Please note that the green line displays the median of all the models estimated 
 Now follows a series of model results.
 
 ### Combined model
-The combined model uses time series data on sewage, case-counts (case-reports, nursing homes, municipal case counts) and hospital / icu admissions.
+The combined model uses time series data on sewage, case-counts (case-reports, nursing homes, municipal case counts), number of positive tests by the GGD and hospital / icu admissions.
 ![combined model plot](data/combined.png)
 [r_combined.csv](data/r_combined.csv)
 
