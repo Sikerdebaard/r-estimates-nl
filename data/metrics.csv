@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-,N,pearsons_r,kendall,spearman,mse,explained_variance_score,r2,rmse,shift_corr_metric,shift,uses,delay_days,last_n_samples_incomplete
-sewage,206.0,0.861846,0.474571,0.66345,0.034498,0.716657,0.714068,0.185736,pearsons_r,-2,sewage,-3,0
-icu,206.0,0.824428,0.550893,0.734547,0.042359,0.625116,0.624808,0.205812,pearsons_r,-10,icu,-11,4
-hospital,206.0,0.916287,0.62884,0.811808,0.028376,0.506484,0.499219,0.168452,pearsons_r,-9,hospital,-10,4
-case-counts,206.0,0.686981,0.836094,0.936375,0.751631,0.347874,0.333561,0.866966,spearman,0,case-counts,-1,7
-municipal-case-counts,206.0,0.704811,0.836477,0.948857,0.376502,0.428214,0.415342,0.613597,spearman,-4,municipal-case-counts,-5,0
-ggd-positive-tests,206.0,0.492841,0.80855,0.927396,1.987296,0.174253,0.161988,1.409715,spearman,-2,ggd-positive-tests,-3,0
-nursing-homes,206.0,0.786638,0.499055,0.656242,0.059758,0.594261,0.579267,0.244455,pearsons_r,-7,nursing-homes,-8,7
-combined,206,0.954374,0.840781,0.962332,0.011338,0.901396,0.900808,0.10648,,0,"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes, sewage",,
-=======
 ,N,pearsons_r,kendall,spearman,mse,explained_variance_score,r2,rmse,shift_corr_metric,shift,uses,delay_days
 sewage,206.0,0.861846,0.474571,0.66345,0.034498,0.716657,0.714068,0.185736,pearsons_r,-2,sewage,-2
 icu,205.0,0.824379,0.551214,0.733685,0.042557,0.624927,0.624637,0.206294,pearsons_r,-10,icu,-10
-hospital,206.0,0.916375,0.628936,0.811882,0.028363,0.506592,0.499355,0.168414,pearsons_r,-9,hospital,-9
+hospital,206.0,0.916287,0.62884,0.811808,0.028376,0.506484,0.499219,0.168452,pearsons_r,-9,hospital,-9
 case-counts,206.0,0.686981,0.836094,0.936375,0.751631,0.347874,0.333561,0.866966,spearman,0,case-counts,0
 municipal-case-counts,206.0,0.704811,0.836477,0.948857,0.376502,0.428214,0.415342,0.613597,spearman,-4,municipal-case-counts,-4
+ggd-positive-tests,206.0,0.492841,0.80855,0.927396,1.987296,0.174253,0.161988,1.409715,spearman,-2,ggd-positive-tests,-2
 nursing-homes,205.0,0.786909,0.497995,0.655855,0.060017,0.594807,0.579476,0.244983,pearsons_r,-7,nursing-homes,-7
-combined,206,0.956823,0.783587,0.931025,0.011256,0.88816,0.887835,0.106095,,0,"case-counts, hospital, icu, municipal-case-counts, nursing-homes, sewage",
->>>>>>> 3a16e1477c7b82c9fdd60cf4262e7de9319629fd
+combined,206,0.954374,0.840781,0.962332,0.011338,0.901396,0.900808,0.10648,,0,"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes, sewage",

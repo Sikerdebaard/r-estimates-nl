@@ -342,12 +342,7 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
     df_series_r, use_shift, df_corr, metrics, corr_metric_used, use_corr_metrics = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
     metrics['shift'] = use_shift
     metrics['uses'] = name
-<<<<<<< HEAD
-    metrics['delay_days'] = (1 - min_samples) + use_shift 
-    metrics['last_n_samples_incomplete'] = incomplete_shift
-=======
     metrics['delay_days'] = use_shift
->>>>>>> 3a16e1477c7b82c9fdd60cf4262e7de9319629fd
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
     corr_plot(df_corr[use_corr_metrics], name, output_path)
