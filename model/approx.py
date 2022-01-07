@@ -246,6 +246,16 @@ def download_nursing_homes():
     return df_nurs
 
 
+def download_ggd_testing_data():
+    df_ggd = pd.read_csv(download_file_with_progressbar('https://data.rivm.nl/covid-19/COVID-19_uitgevoerde_testen.csv'), sep=';')
+    df_ggd['Date_of_statistics'] = pd.to_datetime(df_ggd['Date_of_statistics'])
+
+    df_ggd = df_ggd.groupby('Date_of_statistics')['Tested_positive'].sum().sort_index().to_frame()
+    df_ggd = df_ggd[df_ggd.index > '2021-01-01']
+
+    return df_ggd
+
+
 def download_file_with_progressbar(url):
     print(f'Downloading {url}')
     res = requests.get(url, stream=True)
@@ -328,10 +338,12 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
         df_series_r, iters = approx_r_from_time_series(timeseries[:-incomplete_shift], generation_interval, min_samples=min_samples)
     else:
         df_series_r, iters = approx_r_from_time_series(timeseries, generation_interval, min_samples=min_samples)
+        incomplete_shift = 0
     df_series_r, use_shift, df_corr, metrics, corr_metric_used, use_corr_metrics = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
     metrics['shift'] = use_shift
     metrics['uses'] = name
-    metrics['delay_days'] = (1 - min_samples) + use_shift
+    metrics['delay_days'] = (1 - min_samples) + use_shift 
+    metrics['last_n_samples_incomplete'] = incomplete_shift
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
     corr_plot(df_corr[use_corr_metrics], name, output_path)
@@ -437,6 +449,19 @@ params = {
     'timeseries': df_case['municipality'].rename('municipal case-counts data'), 
     'plot_title': 'Municipal casecounts R estimate vs RIVM R',
     'plot_label': 'R (municipal casecounts, estimate)',
+    'draw_colors': gen_colors_with('#0ACC0D'),
+}
+df_r, iters, metrics = calcmodel_plot_save(**modparams(params))
+all_metrics[params['name']] = metrics
+r_iters[params['name']] = iters.shift(metrics['shift'])
+
+df_ggd = download_ggd_testing_data()
+params = {
+    'name': 'ggd-positive-tests',
+    'incomplete_shift': 0,
+    'timeseries': df_ggd['Tested_positive'].rename('GGD positive tests'), 
+    'plot_title': 'GGD positive tests R estimate vs RIVM R',
+    'plot_label': 'R (GGD pos. tests, estimate)',
     'draw_colors': gen_colors_with('#0ACC0D'),
 }
 df_r, iters, metrics = calcmodel_plot_save(**modparams(params))

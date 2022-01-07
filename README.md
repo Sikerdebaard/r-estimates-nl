@@ -10,6 +10,7 @@ R as estimated on various time series data compared to the R as calculated by th
   * [Combined model](#combined-model)
   * [Case-reports casecounts](#case-reports-casecounts)
   * [Municipal casecounts](#municipal-casecounts)
+  * [GGD positive tests](#ggd-positive-tests)
   * [Nursing homes casecounts](#nursing-homes-casecounts)
   * [Sewage](#sewage)
   * [Hospital admissions](#hospital-admissions)
@@ -54,6 +55,11 @@ The case-reports casecounts model uses time series [data on individual case-repo
 The municipal casecounts model uses time series [data on municipal-level case-reports](https://data.rivm.nl/covid-19/COVID-19_aantallen_gemeente_per_dag.html) as provided by the RIVM.
 ![municipal model plot](data/municipal-case-counts.png)
 [r_municipal-case-counts.csv](data/r_municipal-case-counts.csv)
+
+### GGD positive tests
+The GGD positive tests model uses time series [data on the number of positive tests](https://data.rivm.nl/covid-19/COVID-19_uitgevoerde_testen.html) as reported by the GGD and provided by the RIVM.
+![ggd pos tests model plot](data/ggd-positive-tests.png)
+[r_ggd-positive-tests.csv](data/r_ggd-positive-tests.csv)
 
 ### Nursing homes casecounts
 The nursing homes casecounts model uses time series [data on nursing homes case-reports](https://data.rivm.nl/covid-19/COVID-19_verpleeghuizen.html) as provided by the RIVM.
