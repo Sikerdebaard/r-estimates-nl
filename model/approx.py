@@ -24,7 +24,7 @@ random.seed(0)
 np.random.seed(0)
 
 
-def approx_r_from_time_series(series, generation_interval, min_samples=2):
+def approx_r_from_time_series(series, generation_interval, min_samples=3):
     df_iters = None
 
     print(f'Working on {series.name}')
@@ -342,8 +342,12 @@ def calcmodel_plot_save(name, incomplete_shift, generation_interval, timeseries,
     df_series_r, use_shift, df_corr, metrics, corr_metric_used, use_corr_metrics = shift_series_best_fit(df_example, example_main_col, df_series_r, '50%')
     metrics['shift'] = use_shift
     metrics['uses'] = name
+<<<<<<< HEAD
     metrics['delay_days'] = (1 - min_samples) + use_shift 
     metrics['last_n_samples_incomplete'] = incomplete_shift
+=======
+    metrics['delay_days'] = use_shift
+>>>>>>> 3a16e1477c7b82c9fdd60cf4262e7de9319629fd
 
     df_corr.to_csv(output_path / f'corr_{name}.csv')
     corr_plot(df_corr[use_corr_metrics], name, output_path)
@@ -382,7 +386,7 @@ base_params = {
     'example_main_col': rivm_main_col,
     'output_path': output_path,
     'plot_subtitle': '@covid_nl',
-    'min_samples': 2,
+    'min_samples': 3,
 }
 
 
