@@ -31,6 +31,7 @@ jobs:
       shell: bash
     - name: run model 
       run: |
+        python model/await.py
         python model/approx.py
       shell: bash
     - name: Commit files
