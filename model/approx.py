@@ -258,10 +258,14 @@ def download_ggd_testing_data():
 
 def download_file_with_progressbar(url):
     print(f'Downloading {url}')
-    res = requests.get(url, stream=True)
+
+    headers = {
+            'accept-encoding': 'gzip',
+    }
+    res = requests.get(url, headers=headers, stream=True)
     res.raise_for_status()
     size = int(res.headers.get('content-length', 0))
-    bsize = 1024
+    bsize = 4096
     pbar = tqdm(total=size, unit='iB', unit_scale=True)
     retval = BytesIO() 
     for data in res.iter_content(bsize):
