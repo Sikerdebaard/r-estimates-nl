@@ -497,18 +497,21 @@ for num_models in range(2, len(r_iters.keys()) + 1):
 
 for iters in tqdm(try_models):
     df_combined_r = combine_runs(iters[0], generation_interval)
-    metrics = test_metrics(df_rivm[rivm_main_col], df_combined_r['50%'])
+    metrics = test_metrics(df_rivm[rivm_main_col][-30:], df_combined_r['50%'])
     k = ', '.join(tuple(sorted(iters[1:])))
     combo_models[k] = metrics
     r_combo_models[k] = df_combined_r
 
 df_combo_metrics = pd.DataFrame(combo_models).T.to_csv(output_path / 'combo_metrics.csv')
 
-# we could do some model selection based on the metrics above, but for now use all
+# we could do some model selection based on the metrics above, but for now use a static selection 
+#k = ', '.join(tuple(sorted(r_iters.keys())))
+k = 'case-counts, ggd-positive-tests, municipal-case-counts, nursing-homes'
 
-k = ', '.join(tuple(sorted(r_iters.keys())))
 df_combined_r = r_combo_models[k]
-metrics = combo_models[k]
+df_rivm_current_variant = df_rivm[df_rivm.index >= '2021-12-28']
+#metrics = combo_models[k]
+metrics = test_metrics(df_rivm_current_variant[rivm_main_col], df_combined_r['50%'])
 metrics['shift'] = 0
 metrics['uses'] = k
 all_metrics['combined'] = metrics
