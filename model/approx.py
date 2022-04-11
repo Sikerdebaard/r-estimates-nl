@@ -385,7 +385,7 @@ base_params = {
     'example_main_col': rivm_main_col,
     'output_path': output_path,
     'plot_subtitle': '@covid_nl',
-    'min_samples': 3,
+    'min_samples': 4,
 }
 
 
