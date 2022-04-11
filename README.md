@@ -7,14 +7,14 @@ R as estimated on various time series data compared to the R as calculated by th
 * [How does it work?](#how-does-it-work)
 * [Plot explanation](#plot-explanation)  
 * [Model results](#model-results)
+  * [Sewage](#sewage)
+  * [Hospital admissions](#hospital-admissions)
+  * [ICU admissions](#icu-admissions)
   * [Combined model](#combined-model)
   * [Case-reports casecounts](#case-reports-casecounts)
   * [Municipal casecounts](#municipal-casecounts)
   * [GGD positive tests](#ggd-positive-tests)
-  * [Nursing homes casecounts](#nursing-homes-casecounts)
-  * [Sewage](#sewage)
-  * [Hospital admissions](#hospital-admissions)
-  * [ICU admissions](#icu-admissions)
+  * [Nursing homes casecounts](#nursing-homes-casecounts)  
 * [Metrics](#metrics)
 * [License and academic use](#license-and-academic-use)
 
@@ -39,6 +39,21 @@ Please note that the green line displays the median of all the models estimated 
 
 ## Model results
 Now follows a series of model results.
+
+### Sewage
+The sewage model uses time series [data on RNA flow per 100K residents](https://data.rivm.nl/covid-19/COVID-19_rioolwaterdata.html) as provided by the RIVM.
+![sewage model plot](data/sewage.png)
+[r_sewage.csv](data/r_sewage.csv)
+
+### Hospital admissions
+The hospital admissions model uses time series [data on hospital admissions](https://www.stichting-nice.nl/covid-19-op-de-zkh.jsp) as provided by Stichting NICE.
+![hospital model plot](data/hospital.png)
+[r_hospital.csv](data/r_hospital.csv)
+
+### ICU admissions
+The ICU admissions model uses time series [data on ICU admissions](https://www.stichting-nice.nl/covid-19-op-de-ic.jsp) as provided by Stichting NICE.
+![ICU model plot](data/icu.png)
+[r_icu.csv](data/r_icu.csv)
 
 ### Combined model
 The combined model uses time series data on sewage, case-counts (case-reports, nursing homes, municipal case counts), number of positive tests by the GGD and hospital / icu admissions.
@@ -65,21 +80,6 @@ The GGD positive tests model uses time series [data on the number of positive te
 The nursing homes casecounts model uses time series [data on nursing homes case-reports](https://data.rivm.nl/covid-19/COVID-19_verpleeghuizen.html) as provided by the RIVM.
 ![nursing homes model plot](data/nursing-homes.png)
 [r_nursing-homes.csv](data/r_nursing-homes.csv)
-
-### Sewage
-The sewage model uses time series [data on RNA flow per 100K residents](https://data.rivm.nl/covid-19/COVID-19_rioolwaterdata.html) as provided by the RIVM.
-![sewage model plot](data/sewage.png)
-[r_sewage.csv](data/r_sewage.csv)
-
-### Hospital admissions
-The hospital admissions model uses time series [data on hospital admissions](https://www.stichting-nice.nl/covid-19-op-de-zkh.jsp) as provided by Stichting NICE.
-![hospital model plot](data/hospital.png)
-[r_hospital.csv](data/r_hospital.csv)
-
-### ICU admissions
-The ICU admissions model uses time series [data on ICU admissions](https://www.stichting-nice.nl/covid-19-op-de-ic.jsp) as provided by Stichting NICE.
-![ICU model plot](data/icu.png)
-[r_icu.csv](data/r_icu.csv)
 
 ## Metrics
 This project keeps track of the models performance by comparing its outputs with the R as calculated by the RIVM. Various metrics are generated E.g. the R2 score, MSE and correlation metrics. These can be found in [metrics.csv](data/metrics.csv).  
