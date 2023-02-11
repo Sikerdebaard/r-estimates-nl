@@ -1,121 +1,121 @@
 ,N,pearsons_r,kendall,spearman,mse,explained_variance_score,r2,rmse
-"icu, sewage",17.0,0.837881,0.696315,0.869939,0.009111,0.65254,0.652467,0.095452
-"hospital, sewage",17.0,0.944605,0.6815,0.860123,0.008142,0.756668,0.72758,0.090232
+"icu, sewage",17.0,0.810341,0.696315,0.869939,0.013887,0.589513,0.574996,0.117841
+"hospital, sewage",17.0,0.943142,0.711131,0.879755,0.011062,0.708086,0.70197,0.105174
 "case-counts, sewage",17.0,0.908297,0.711131,0.879755,0.005043,0.770276,0.769022,0.071011
 "municipal-case-counts, sewage",17.0,0.91664,0.711131,0.879755,0.005167,0.774969,0.772495,0.07188
 "ggd-positive-tests, sewage",17.0,0.923898,0.696315,0.866258,0.0187,0.635496,0.606804,0.136748
 "nursing-homes, sewage",17.0,0.925429,0.711131,0.874847,0.006428,0.773484,0.736925,0.080173
-"hospital, icu",17.0,0.811822,0.533348,0.733743,0.006023,0.226412,-0.310229,0.077609
-"case-counts, icu",17.0,0.826371,0.6815,0.865031,0.003248,0.499276,0.484838,0.056991
-"icu, municipal-case-counts",17.0,0.819766,0.696315,0.869939,0.003307,0.432635,0.42924,0.057505
-"ggd-positive-tests, icu",17.0,0.834213,0.6815,0.86135,0.006417,0.683365,0.662878,0.080106
-"icu, nursing-homes",17.0,0.703175,0.444457,0.560737,0.005288,-0.398811,-0.447119,0.072719
-"case-counts, hospital",17.0,0.924453,0.607424,0.793866,0.002378,0.827083,0.715201,0.048767
-"hospital, municipal-case-counts",17.0,0.915271,0.548163,0.741105,0.001873,0.826025,0.802399,0.043279
-"ggd-positive-tests, hospital",17.0,0.890028,0.444457,0.700614,0.008749,0.699068,0.698472,0.093538
-"hospital, nursing-homes",17.0,0.873025,0.548163,0.717792,0.002514,0.721649,0.707774,0.050136
+"hospital, icu",17.0,0.776302,0.577794,0.757056,0.008434,-1.401438,-3.081774,0.091838
+"case-counts, icu",17.0,0.765939,0.562978,0.752148,0.004256,0.208991,0.183122,0.065234
+"icu, municipal-case-counts",17.0,0.770055,0.577794,0.755829,0.004138,0.109636,0.105033,0.06433
+"ggd-positive-tests, icu",17.0,0.848238,0.65187,0.835583,0.008363,0.695083,0.59669,0.091448
+"icu, nursing-homes",17.0,0.585898,0.281489,0.404908,0.006524,-1.040153,-1.040471,0.080773
+"case-counts, hospital",17.0,0.92951,0.711131,0.877301,0.002141,0.846346,0.756617,0.046272
+"hospital, municipal-case-counts",17.0,0.93086,0.65187,0.828221,0.001536,0.861281,0.84428,0.039197
+"ggd-positive-tests, hospital",17.0,0.917024,0.666685,0.831902,0.009056,0.71582,0.71055,0.095163
+"hospital, nursing-homes",17.0,0.910057,0.592609,0.761964,0.001904,0.804455,0.782823,0.043634
 "case-counts, municipal-case-counts",17.0,0.913761,0.696315,0.872393,0.001639,0.802951,0.802931,0.040481
 "case-counts, ggd-positive-tests",17.0,0.913449,0.696315,0.872393,0.003702,0.804698,0.795182,0.060844
 "case-counts, nursing-homes",17.0,0.898099,0.711131,0.879755,0.002171,0.671412,0.649693,0.046592
 "ggd-positive-tests, municipal-case-counts",17.0,0.903257,0.607424,0.787731,0.005662,0.777251,0.71515,0.075246
 "municipal-case-counts, nursing-homes",17.0,0.905157,0.711131,0.879755,0.003138,0.671198,0.474079,0.056014
 "ggd-positive-tests, nursing-homes",17.0,0.861789,0.696315,0.869939,0.007862,0.733786,0.533533,0.088669
-"hospital, icu, sewage",17.0,0.906144,0.6815,0.86135,0.00579,0.786423,0.697741,0.07609
-"case-counts, icu, sewage",17.0,0.861232,0.711131,0.879755,0.003191,0.740017,0.73817,0.056493
-"icu, municipal-case-counts, sewage",17.0,0.858305,0.696315,0.869939,0.003325,0.735674,0.734663,0.057661
-"ggd-positive-tests, icu, sewage",17.0,0.890839,0.711131,0.879755,0.009781,0.689401,0.682104,0.098898
-"icu, nursing-homes, sewage",17.0,0.798383,0.6815,0.858896,0.00497,0.626009,0.589828,0.070498
-"case-counts, hospital, sewage",17.0,0.932362,0.696315,0.87362,0.004801,0.821376,0.753866,0.069288
-"hospital, municipal-case-counts, sewage",17.0,0.930756,0.607424,0.800001,0.004897,0.802732,0.772869,0.069975
-"ggd-positive-tests, hospital, sewage",17.0,0.946017,0.696315,0.869939,0.01143,0.704441,0.701094,0.106909
-"hospital, nursing-homes, sewage",17.0,0.94455,0.622239,0.797547,0.004354,0.823395,0.795864,0.065982
+"hospital, icu, sewage",17.0,0.898853,0.725946,0.887117,0.008532,0.713259,0.699665,0.09237
+"case-counts, icu, sewage",17.0,0.847355,0.711131,0.879755,0.003591,0.716573,0.716547,0.059924
+"icu, municipal-case-counts, sewage",17.0,0.858095,0.711131,0.879755,0.003754,0.736301,0.724942,0.061267
+"ggd-positive-tests, icu, sewage",17.0,0.887098,0.711131,0.879755,0.012026,0.664745,0.650003,0.109663
+"icu, nursing-homes, sewage",17.0,0.818682,0.592609,0.809817,0.005899,0.669806,0.581276,0.076802
+"case-counts, hospital, sewage",17.0,0.937751,0.725946,0.887117,0.004853,0.817706,0.767674,0.069663
+"hospital, municipal-case-counts, sewage",17.0,0.936854,0.696315,0.866258,0.004882,0.806372,0.779395,0.069872
+"ggd-positive-tests, hospital, sewage",17.0,0.948681,0.725946,0.882209,0.011324,0.707106,0.703922,0.106414
+"hospital, nursing-homes, sewage",17.0,0.949794,0.725946,0.883436,0.004346,0.824612,0.802676,0.065922
 "case-counts, municipal-case-counts, sewage",17.0,0.908343,0.725946,0.882209,0.002292,0.823922,0.823546,0.047877
 "case-counts, ggd-positive-tests, sewage",17.0,0.90282,0.696315,0.869939,0.00879,0.709187,0.704833,0.093753
 "case-counts, nursing-homes, sewage",17.0,0.921116,0.696315,0.87362,0.001915,0.848378,0.839452,0.043757
 "ggd-positive-tests, municipal-case-counts, sewage",17.0,0.911221,0.696315,0.869939,0.009464,0.710828,0.695098,0.097286
 "municipal-case-counts, nursing-homes, sewage",17.0,0.93588,0.711131,0.879755,0.001827,0.87583,0.836556,0.042748
 "ggd-positive-tests, nursing-homes, sewage",17.0,0.923158,0.711131,0.879755,0.009828,0.718736,0.69198,0.099138
-"case-counts, hospital, icu",17.0,0.889949,0.696315,0.869939,0.00297,0.627909,0.498214,0.054501
-"hospital, icu, municipal-case-counts",17.0,0.888631,0.696315,0.869939,0.00253,0.63755,0.583439,0.050294
-"ggd-positive-tests, hospital, icu",17.0,0.880085,0.6815,0.856442,0.00427,0.759922,0.752166,0.065342
-"hospital, icu, nursing-homes",17.0,0.842389,0.637055,0.817179,0.003449,0.108202,0.090535,0.058732
-"case-counts, icu, municipal-case-counts",17.0,0.856066,0.6815,0.871166,0.002656,0.63474,0.634219,0.051537
-"case-counts, ggd-positive-tests, icu",17.0,0.862125,0.711131,0.879755,0.002909,0.733742,0.730173,0.053932
-"case-counts, icu, nursing-homes",17.0,0.815465,0.637055,0.825767,0.00338,0.424699,0.419607,0.058139
-"ggd-positive-tests, icu, municipal-case-counts",17.0,0.875051,0.696315,0.868712,0.003067,0.760788,0.724,0.055379
-"icu, municipal-case-counts, nursing-homes",17.0,0.817791,0.666685,0.84908,0.00368,0.264078,0.216319,0.060667
-"ggd-positive-tests, icu, nursing-homes",17.0,0.923334,0.725946,0.884663,0.003344,0.841116,0.642536,0.057824
-"case-counts, hospital, municipal-case-counts",17.0,0.913553,0.622239,0.802455,0.00187,0.793273,0.765101,0.043241
-"case-counts, ggd-positive-tests, hospital",17.0,0.911548,0.696315,0.87362,0.003592,0.805057,0.796106,0.059931
-"case-counts, hospital, nursing-homes",17.0,0.923026,0.548163,0.750921,0.001606,0.785818,0.774626,0.040079
-"ggd-positive-tests, hospital, municipal-case-counts",17.0,0.908569,0.548163,0.749694,0.004413,0.78235,0.781654,0.066432
-"hospital, municipal-case-counts, nursing-homes",17.0,0.935634,0.488902,0.717792,0.001348,0.828972,0.820125,0.036711
-"ggd-positive-tests, hospital, nursing-homes",17.0,0.865567,0.562978,0.764418,0.005467,0.726311,0.719059,0.073941
+"case-counts, hospital, icu",17.0,0.89054,0.711131,0.876074,0.003175,0.558559,0.395491,0.05635
+"hospital, icu, municipal-case-counts",17.0,0.891923,0.65187,0.842945,0.002551,0.594005,0.538025,0.050509
+"ggd-positive-tests, hospital, icu",17.0,0.887049,0.696315,0.866258,0.004693,0.75767,0.757549,0.068502
+"hospital, icu, nursing-homes",17.0,0.80623,0.518533,0.730062,0.003976,-0.050903,-0.081758,0.063059
+"case-counts, icu, municipal-case-counts",17.0,0.853679,0.6815,0.863804,0.002717,0.597858,0.595689,0.052124
+"case-counts, ggd-positive-tests, icu",17.0,0.881309,0.711131,0.879755,0.002507,0.766872,0.757274,0.050067
+"case-counts, icu, nursing-homes",17.0,0.782351,0.548163,0.743559,0.003932,0.199707,0.196425,0.062702
+"ggd-positive-tests, icu, municipal-case-counts",17.0,0.882447,0.666685,0.847853,0.003214,0.777429,0.727008,0.056693
+"icu, municipal-case-counts, nursing-homes",17.0,0.82055,0.577794,0.787731,0.003706,0.237954,0.182019,0.060875
+"ggd-positive-tests, icu, nursing-homes",17.0,0.928251,0.725946,0.884663,0.003599,0.84144,0.584697,0.059988
+"case-counts, hospital, municipal-case-counts",17.0,0.922946,0.6815,0.860123,0.0016,0.831155,0.816576,0.040004
+"case-counts, ggd-positive-tests, hospital",17.0,0.919027,0.725946,0.882209,0.003596,0.810297,0.804979,0.059966
+"case-counts, hospital, nursing-homes",17.0,0.932217,0.65187,0.835583,0.00137,0.825803,0.820612,0.037015
+"ggd-positive-tests, hospital, municipal-case-counts",17.0,0.918532,0.696315,0.856442,0.004332,0.792487,0.790918,0.065817
+"hospital, municipal-case-counts, nursing-homes",17.0,0.958461,0.666685,0.834356,0.000967,0.894182,0.878874,0.031105
+"ggd-positive-tests, hospital, nursing-homes",17.0,0.879532,0.755576,0.896933,0.005426,0.741875,0.731061,0.073662
 "case-counts, ggd-positive-tests, municipal-case-counts",17.0,0.921738,0.711131,0.876074,0.002137,0.848246,0.831451,0.046226
 "case-counts, municipal-case-counts, nursing-homes",17.0,0.909624,0.696315,0.87362,0.001877,0.742519,0.727294,0.043325
 "case-counts, ggd-positive-tests, nursing-homes",17.0,0.928136,0.711131,0.878528,0.002418,0.860958,0.780215,0.049169
 "ggd-positive-tests, municipal-case-counts, nursing-homes",17.0,0.917641,0.711131,0.877301,0.003807,0.840928,0.652958,0.061699
-"case-counts, hospital, icu, sewage",17.0,0.895801,0.696315,0.87362,0.002847,0.802387,0.765451,0.053359
-"hospital, icu, municipal-case-counts, sewage",17.0,0.892963,0.666685,0.847853,0.0027,0.797378,0.7821,0.051965
-"ggd-positive-tests, hospital, icu, sewage",17.0,0.912658,0.696315,0.869939,0.007136,0.738085,0.737202,0.084475
-"hospital, icu, nursing-homes, sewage",17.0,0.888093,0.65187,0.839264,0.002464,0.786154,0.781366,0.049635
-"case-counts, icu, municipal-case-counts, sewage",17.0,0.882686,0.711131,0.879755,0.002433,0.772608,0.772519,0.049325
-"case-counts, ggd-positive-tests, icu, sewage",17.0,0.878731,0.696315,0.869939,0.005138,0.742863,0.740938,0.071677
-"case-counts, icu, nursing-homes, sewage",17.0,0.857732,0.6815,0.865031,0.002827,0.712771,0.710016,0.053168
-"ggd-positive-tests, icu, municipal-case-counts, sewage",17.0,0.888837,0.696315,0.869939,0.005132,0.756205,0.743152,0.071636
-"icu, municipal-case-counts, nursing-homes, sewage",17.0,0.876377,0.696315,0.877301,0.002601,0.739245,0.713313,0.051001
-"ggd-positive-tests, icu, nursing-homes, sewage",17.0,0.8938,0.711131,0.879755,0.005779,0.758677,0.720227,0.076018
-"case-counts, hospital, municipal-case-counts, sewage",17.0,0.924435,0.6815,0.858896,0.001987,0.852844,0.844058,0.044573
-"case-counts, ggd-positive-tests, hospital, sewage",17.0,0.915928,0.696315,0.872393,0.006308,0.754833,0.751073,0.07942
-"case-counts, hospital, nursing-homes, sewage",17.0,0.937575,0.696315,0.87362,0.001571,0.87741,0.872678,0.039631
-"ggd-positive-tests, hospital, municipal-case-counts, sewage",17.0,0.919871,0.65187,0.828221,0.006774,0.748438,0.748381,0.082305
-"hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.937888,0.622239,0.800001,0.001545,0.877243,0.877029,0.039304
-"ggd-positive-tests, hospital, nursing-homes, sewage",17.0,0.929111,0.696315,0.869939,0.006826,0.754365,0.75321,0.082617
+"case-counts, hospital, icu, sewage",17.0,0.898116,0.711131,0.879755,0.002688,0.806594,0.783682,0.051843
+"hospital, icu, municipal-case-counts, sewage",17.0,0.897147,0.65187,0.839264,0.002531,0.804663,0.80135,0.050311
+"ggd-positive-tests, hospital, icu, sewage",17.0,0.909843,0.725946,0.882209,0.008612,0.7147,0.714683,0.0928
+"hospital, icu, nursing-homes, sewage",17.0,0.901711,0.725946,0.882209,0.002004,0.807196,0.806755,0.044766
+"case-counts, icu, municipal-case-counts, sewage",17.0,0.884752,0.711131,0.879755,0.002347,0.774098,0.773881,0.048448
+"case-counts, ggd-positive-tests, icu, sewage",17.0,0.880795,0.725946,0.882209,0.005754,0.73713,0.728746,0.075852
+"case-counts, icu, nursing-homes, sewage",17.0,0.860827,0.6815,0.865031,0.002757,0.706156,0.695291,0.052504
+"ggd-positive-tests, icu, municipal-case-counts, sewage",17.0,0.892311,0.725946,0.882209,0.005776,0.753443,0.72661,0.076001
+"icu, municipal-case-counts, nursing-homes, sewage",17.0,0.875949,0.666685,0.851534,0.002732,0.734886,0.693148,0.05227
+"ggd-positive-tests, icu, nursing-homes, sewage",17.0,0.896353,0.711131,0.879755,0.006202,0.767596,0.68773,0.078754
+"case-counts, hospital, municipal-case-counts, sewage",17.0,0.926997,0.696315,0.872393,0.002004,0.855035,0.850174,0.044768
+"case-counts, ggd-positive-tests, hospital, sewage",17.0,0.915861,0.696315,0.869939,0.006722,0.747333,0.745228,0.081987
+"case-counts, hospital, nursing-homes, sewage",17.0,0.939691,0.725946,0.882209,0.001583,0.879493,0.876467,0.039782
+"ggd-positive-tests, hospital, municipal-case-counts, sewage",17.0,0.921368,0.6815,0.858896,0.006888,0.747642,0.747625,0.082994
+"hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.940657,0.6815,0.860123,0.001543,0.880877,0.880276,0.039278
+"ggd-positive-tests, hospital, nursing-homes, sewage",17.0,0.931487,0.696315,0.869939,0.007054,0.752572,0.750812,0.083986
 "case-counts, ggd-positive-tests, municipal-case-counts, sewage",17.0,0.911043,0.666685,0.853988,0.003888,0.797914,0.790207,0.062354
 "case-counts, municipal-case-counts, nursing-homes, sewage",17.0,0.925631,0.711131,0.879755,0.001656,0.855381,0.845283,0.04069
 "case-counts, ggd-positive-tests, nursing-homes, sewage",17.0,0.921708,0.6815,0.867485,0.003905,0.810913,0.793177,0.062488
 "ggd-positive-tests, municipal-case-counts, nursing-homes, sewage",17.0,0.927232,0.696315,0.869939,0.004216,0.817841,0.778345,0.064929
-"case-counts, hospital, icu, municipal-case-counts",17.0,0.904383,0.696315,0.869939,0.002171,0.707816,0.665891,0.04659
-"case-counts, ggd-positive-tests, hospital, icu",17.0,0.894482,0.696315,0.87362,0.00244,0.798958,0.788202,0.0494
-"case-counts, hospital, icu, nursing-homes",17.0,0.877606,0.65187,0.84908,0.002606,0.53095,0.509772,0.051044
-"ggd-positive-tests, hospital, icu, municipal-case-counts",17.0,0.900443,0.666685,0.847853,0.002283,0.810753,0.810726,0.047785
-"hospital, icu, municipal-case-counts, nursing-homes",17.0,0.882262,0.65187,0.826994,0.002444,0.532587,0.532497,0.049438
-"ggd-positive-tests, hospital, icu, nursing-homes",17.0,0.908943,0.740761,0.900614,0.002268,0.82545,0.799937,0.047618
-"case-counts, ggd-positive-tests, icu, municipal-case-counts",17.0,0.887809,0.725946,0.882209,0.002281,0.775659,0.770372,0.047755
-"case-counts, icu, municipal-case-counts, nursing-homes",17.0,0.855159,0.711131,0.876074,0.002769,0.558651,0.549723,0.052619
-"case-counts, ggd-positive-tests, icu, nursing-homes",17.0,0.872431,0.711131,0.879755,0.002687,0.719361,0.686178,0.051836
-"ggd-positive-tests, icu, municipal-case-counts, nursing-homes",17.0,0.906529,0.740761,0.888344,0.002702,0.79155,0.682324,0.051978
-"case-counts, ggd-positive-tests, hospital, municipal-case-counts",17.0,0.925478,0.6815,0.858896,0.001808,0.855345,0.855282,0.042525
-"case-counts, hospital, municipal-case-counts, nursing-homes",17.0,0.930456,0.637055,0.822087,0.001396,0.807951,0.807292,0.037357
-"case-counts, ggd-positive-tests, hospital, nursing-homes",17.0,0.942447,0.755576,0.907976,0.001539,0.885275,0.877701,0.039227
-"ggd-positive-tests, hospital, municipal-case-counts, nursing-homes",17.0,0.92553,0.622239,0.795093,0.002277,0.855419,0.817851,0.047722
+"case-counts, hospital, icu, municipal-case-counts",17.0,0.904236,0.711131,0.877301,0.002102,0.706868,0.676047,0.045844
+"case-counts, ggd-positive-tests, hospital, icu",17.0,0.912568,0.711131,0.879755,0.001994,0.832684,0.8291,0.044659
+"case-counts, hospital, icu, nursing-homes",17.0,0.87052,0.666685,0.847853,0.002731,0.46703,0.453274,0.05226
+"ggd-positive-tests, hospital, icu, municipal-case-counts",17.0,0.909582,0.65187,0.839264,0.002127,0.827336,0.822157,0.046119
+"hospital, icu, municipal-case-counts, nursing-homes",17.0,0.888248,0.696315,0.868712,0.002328,0.571104,0.569394,0.048253
+"ggd-positive-tests, hospital, icu, nursing-homes",17.0,0.937506,0.785207,0.921473,0.001723,0.87406,0.823893,0.041515
+"case-counts, ggd-positive-tests, icu, municipal-case-counts",17.0,0.893562,0.725946,0.882209,0.002186,0.782479,0.770993,0.046749
+"case-counts, icu, municipal-case-counts, nursing-homes",17.0,0.852359,0.666685,0.845399,0.002878,0.502897,0.490952,0.053643
+"case-counts, ggd-positive-tests, icu, nursing-homes",17.0,0.8867,0.696315,0.869939,0.002518,0.735311,0.686227,0.050176
+"ggd-positive-tests, icu, municipal-case-counts, nursing-homes",17.0,0.914773,0.740761,0.888344,0.002762,0.801723,0.66215,0.052551
+"case-counts, ggd-positive-tests, hospital, municipal-case-counts",17.0,0.930134,0.696315,0.872393,0.001803,0.861971,0.861348,0.042462
+"case-counts, hospital, municipal-case-counts, nursing-homes",17.0,0.935732,0.711131,0.87362,0.001262,0.837443,0.837429,0.03552
+"case-counts, ggd-positive-tests, hospital, nursing-homes",17.0,0.947455,0.770392,0.914111,0.001506,0.892709,0.883313,0.038809
+"ggd-positive-tests, hospital, municipal-case-counts, nursing-homes",17.0,0.930705,0.725946,0.884663,0.002259,0.86384,0.822974,0.047532
 "case-counts, ggd-positive-tests, municipal-case-counts, nursing-homes",17.0,0.926616,0.725946,0.882209,0.00202,0.854316,0.799652,0.04495
-"case-counts, hospital, icu, municipal-case-counts, sewage",17.0,0.903285,0.696315,0.87362,0.002066,0.810214,0.800647,0.045449
-"case-counts, ggd-positive-tests, hospital, icu, sewage",17.0,0.901474,0.711131,0.879755,0.004317,0.781034,0.772287,0.065705
-"case-counts, hospital, icu, nursing-homes, sewage",17.0,0.899811,0.711131,0.879755,0.001976,0.79264,0.788768,0.044449
-"ggd-positive-tests, hospital, icu, municipal-case-counts, sewage",17.0,0.904806,0.711131,0.877301,0.004443,0.778668,0.77768,0.066659
-"hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.907053,0.696315,0.87362,0.0018,0.807618,0.807599,0.042431
-"ggd-positive-tests, hospital, icu, nursing-homes, sewage",17.0,0.90962,0.725946,0.884663,0.004347,0.784395,0.784073,0.065934
-"case-counts, ggd-positive-tests, icu, municipal-case-counts, sewage",17.0,0.89499,0.711131,0.879755,0.002811,0.799061,0.795033,0.053017
-"case-counts, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.884264,0.6815,0.865031,0.002263,0.755181,0.749763,0.04757
-"case-counts, ggd-positive-tests, icu, nursing-homes, sewage",17.0,0.896409,0.696315,0.877301,0.002639,0.80351,0.783409,0.051368
-"ggd-positive-tests, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.91148,0.711131,0.879755,0.002768,0.830067,0.781884,0.052612
-"case-counts, ggd-positive-tests, hospital, municipal-case-counts, sewage",17.0,0.913869,0.711131,0.876074,0.004215,0.791285,0.789312,0.064927
-"case-counts, hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.933889,0.696315,0.87362,0.00135,0.870326,0.870294,0.036745
-"case-counts, ggd-positive-tests, hospital, nursing-homes, sewage",17.0,0.925355,0.725946,0.884663,0.003747,0.810246,0.809298,0.061216
-"ggd-positive-tests, hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.918401,0.711131,0.871166,0.00431,0.7926,0.791597,0.065649
+"case-counts, hospital, icu, municipal-case-counts, sewage",17.0,0.898048,0.696315,0.872393,0.002184,0.801874,0.794738,0.046732
+"case-counts, ggd-positive-tests, hospital, icu, sewage",17.0,0.901854,0.711131,0.879755,0.004783,0.770754,0.766943,0.069163
+"case-counts, hospital, icu, nursing-homes, sewage",17.0,0.907417,0.711131,0.879755,0.001812,0.80605,0.80292,0.042567
+"ggd-positive-tests, hospital, icu, municipal-case-counts, sewage",17.0,0.899255,0.6815,0.858896,0.004979,0.763674,0.763201,0.070561
+"hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.910621,0.6815,0.867485,0.001741,0.812527,0.810414,0.041722
+"ggd-positive-tests, hospital, icu, nursing-homes, sewage",17.0,0.912008,0.711131,0.874847,0.005056,0.773427,0.771073,0.071103
+"case-counts, ggd-positive-tests, icu, municipal-case-counts, sewage",17.0,0.894978,0.711131,0.879755,0.002967,0.797903,0.789423,0.054468
+"case-counts, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.899007,0.711131,0.879755,0.002007,0.78635,0.778502,0.044794
+"case-counts, ggd-positive-tests, icu, nursing-homes, sewage",17.0,0.906183,0.711131,0.879755,0.002516,0.821167,0.792145,0.050163
+"ggd-positive-tests, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.912977,0.711131,0.879755,0.002917,0.832315,0.773418,0.054009
+"case-counts, ggd-positive-tests, hospital, municipal-case-counts, sewage",17.0,0.915799,0.725946,0.882209,0.004147,0.794377,0.792226,0.064395
+"case-counts, hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.932143,0.6815,0.867485,0.001399,0.867465,0.867446,0.037402
+"case-counts, ggd-positive-tests, hospital, nursing-homes, sewage",17.0,0.926895,0.725946,0.884663,0.003857,0.808734,0.808336,0.062104
+"ggd-positive-tests, hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.9216,0.711131,0.871166,0.0043,0.795427,0.794161,0.065574
 "case-counts, ggd-positive-tests, municipal-case-counts, nursing-homes, sewage",17.0,0.930136,0.711131,0.879755,0.002188,0.860303,0.836829,0.046774
-"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts",17.0,0.906221,0.696315,0.87362,0.001898,0.814282,0.812817,0.043561
-"case-counts, hospital, icu, municipal-case-counts, nursing-homes",17.0,0.894678,0.6815,0.867485,0.002137,0.645652,0.642891,0.046225
-"case-counts, ggd-positive-tests, hospital, icu, nursing-homes",17.0,0.902206,0.711131,0.879755,0.001903,0.792358,0.788948,0.043627
-"ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes",17.0,0.918532,0.696315,0.87362,0.001808,0.828726,0.802672,0.042522
-"case-counts, ggd-positive-tests, icu, municipal-case-counts, nursing-homes",17.0,0.885894,0.725946,0.882209,0.002418,0.746768,0.715397,0.049176
-"case-counts, ggd-positive-tests, hospital, municipal-case-counts, nursing-homes",17.0,0.944018,0.696315,0.87362,0.001238,0.889825,0.880105,0.03518
-"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, sewage",17.0,0.90836,0.725946,0.882209,0.002549,0.820145,0.819785,0.050485
-"case-counts, hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.905455,0.696315,0.87362,0.001819,0.79901,0.798055,0.042652
-"case-counts, ggd-positive-tests, hospital, icu, nursing-homes, sewage",17.0,0.916673,0.711131,0.879755,0.002281,0.835406,0.835227,0.047764
-"ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.916813,0.725946,0.882209,0.002396,0.835076,0.828544,0.04895
-"case-counts, ggd-positive-tests, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.908892,0.711131,0.879755,0.00216,0.825031,0.807227,0.046474
-"case-counts, ggd-positive-tests, hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.932941,0.725946,0.882209,0.001985,0.862046,0.858334,0.044559
-"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes",17.0,0.912956,0.696315,0.87362,0.001697,0.811658,0.807701,0.041193
-"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.919844,0.725946,0.882209,0.001885,0.846054,0.842019,0.043417
+"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts",17.0,0.913308,0.696315,0.872393,0.001751,0.8291,0.829099,0.041851
+"case-counts, hospital, icu, municipal-case-counts, nursing-homes",17.0,0.902143,0.696315,0.867485,0.001997,0.674502,0.67272,0.044692
+"case-counts, ggd-positive-tests, hospital, icu, nursing-homes",17.0,0.910851,0.725946,0.887117,0.001744,0.808069,0.803443,0.041763
+"ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes",17.0,0.934811,0.6815,0.867485,0.001548,0.860938,0.828619,0.039339
+"case-counts, ggd-positive-tests, icu, municipal-case-counts, nursing-homes",17.0,0.894365,0.711131,0.872393,0.002304,0.758166,0.719852,0.048004
+"case-counts, ggd-positive-tests, hospital, municipal-case-counts, nursing-homes",17.0,0.945587,0.6815,0.867485,0.001218,0.893182,0.883024,0.0349
+"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, sewage",17.0,0.911099,0.725946,0.882209,0.00247,0.824905,0.82487,0.049698
+"case-counts, hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.913279,0.711131,0.879755,0.001658,0.812777,0.812626,0.040719
+"case-counts, ggd-positive-tests, hospital, icu, nursing-homes, sewage",17.0,0.923012,0.711131,0.879755,0.002131,0.846583,0.845045,0.046158
+"ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.926568,0.711131,0.877301,0.002141,0.854336,0.839816,0.046272
+"case-counts, ggd-positive-tests, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.910522,0.711131,0.879755,0.002211,0.82793,0.801562,0.04702
+"case-counts, ggd-positive-tests, hospital, municipal-case-counts, nursing-homes, sewage",17.0,0.932829,0.725946,0.882209,0.002006,0.861509,0.857484,0.044792
+"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes",17.0,0.914663,0.711131,0.879755,0.001686,0.809849,0.802527,0.041065
+"case-counts, ggd-positive-tests, hospital, icu, municipal-case-counts, nursing-homes, sewage",17.0,0.925276,0.725946,0.882209,0.001766,0.856058,0.850619,0.042021
