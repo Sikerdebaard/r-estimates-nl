@@ -251,7 +251,7 @@ def download_nice_hospital_data():
 
     df_intake = df_intake.sum(axis=1).rename('hospital_admissions_nice')
 
-    return df_hosp
+    return df_intake 
 
 
 def download_rivm_casecounts():
