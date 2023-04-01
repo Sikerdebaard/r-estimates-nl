@@ -211,17 +211,45 @@ def download_sewage_data_newstyle():
 
 
 def download_nice_icu_data():
-    df_icu = pd.read_excel(download_file_with_progressbar('https://github.com/Sikerdebaard/dutchcovid19data/raw/master/data/new-intake.xlsx'), index_col=0)
-    df_icu.index = pd.to_datetime(df_icu.index)
-    df_icu = df_icu.sum(axis=1).rename('icu_admissions_nice')
+    csv_urls = [
+        'https://raw.githubusercontent.com/Sikerdebaard/dutchcovid19data/master/data/hist/icu/new-intake.csv',
+        'https://raw.githubusercontent.com/Sikerdebaard/dutchcovid19data/master/data/icu/new-intake.csv',
+    ]
 
-    return df_icu
+    df_intake = pd.DataFrame(index=[])
+
+    for url in csv_urls:
+        df = pd.read_csv(url, index_col=0)
+
+        df_intake = df.combine_first(df_intake)
+
+    df_intake.index = pd.to_datetime(df_intake.index)
+
+    df_intake.sort_index(inplace=True)
+
+    df_intake = df_intake.sum(axis=1).rename('icu_admissions_nice')
+
+    return df_intake
 
 
 def download_nice_hospital_data():
-    df_hosp = pd.read_excel(download_file_with_progressbar('https://github.com/Sikerdebaard/dutchcovid19data/raw/master/data/hospitalized/new-intake.xlsx'), index_col=0)
-    df_hosp.index = pd.to_datetime(df_icu.index)
-    df_hosp = df_hosp.sum(axis=1).rename('hospital_admissions_nice')
+    csv_urls = [
+        'https://raw.githubusercontent.com/Sikerdebaard/dutchcovid19data/master/data/hist/clinic/new-intake.csv',
+        'https://raw.githubusercontent.com/Sikerdebaard/dutchcovid19data/master/data/clinic/new-intake.csv',
+    ]
+
+    df_intake = pd.DataFrame(index=[])
+
+    for url in csv_urls:
+        df = pd.read_csv(url, index_col=0)
+        
+        df_intake = df.combine_first(df_intake)
+        
+    df_intake.index = pd.to_datetime(df_intake.index)
+
+    df_intake.sort_index(inplace=True)
+
+    df_intake = df_intake.sum(axis=1).rename('hospital_admissions_nice')
 
     return df_hosp
 
